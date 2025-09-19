@@ -11,21 +11,23 @@ public class b_problem11 {
         arr[i][j] = sc.nextInt();
       }
     }
-    while(n>=0 || m >= 0 ){
-      for(int i=0;i<n-1;i++){
-        System.out.print(arr[0][i]+" ");
+    int idx1=0;
+    int idx2=0; 
+    while(idx1 != n || idx2 != m){
+      for(int i=idx1;i<n;i++){
+        System.out.println(arr[0][i]);
       }
-      for(int i=0;i<m;i++){
-        System.out.print(arr[i][n-1]+" ");
+      for(int j=idx2;j<m-1;j++){
+        System.out.println(arr[j+1][m-1]);
       }
-      if(n!=1){
-        for(int i=n-2;i>=0;i--){
-          System.out.print(arr[m-1][i]+" ");
-        }
-        for(int i=m-2;i>0;i--){
-          System.out.print(arr[i][0]+" ");
-        }
+      for(int i=idx1; i<n-1;i++){
+        System.out.println(arr[n-1][n-i-1]);
       }
+      for(int j=idx2; j<m-1 ;j++){
+        System.out.println(arr[0][m-2-j]);
+      }
+      idx1++;
+      idx2++;
       m--;
       n--;
     }
