@@ -37,3 +37,4 @@ public class b9_problem {
     sc.close();
   }
 }
+
